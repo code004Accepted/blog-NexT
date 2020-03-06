@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="code004">
+    
+    <meta name="description" content="一个OIer的学校生活与OI竞赛记录">
+    
+    
+    
+    
+    
+    
+    <title>Hexo博客搭建—从入门到精通 | code004&#39;s Blog</title>
+    <!-- inject:style -->
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <!-- endinject -->
+    <style>
+        .cube-loading {
+            top: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url('/images/lg/loading.gif') no-repeat center center;
+            background-color: rgba(0,0,0,.7);
+        }
+
+        .cube-loading.out {
+            display: none;
+        }
+
+        .cube-loading:before {
+            display: block;
+            content: '加载中';
+            position: relative;
+            width: 100%;
+            top: 50%;
+            right: -50%;
+            color: #fff;
+        }
+
+        @media(max-width: 768px) {
+            .cube-loading:before {
+                font-size: 1.2em;
+                transform: translate(-24px,20px);
+                -webkit-transform: translate(-24px,20px);
+                -o-transform: translate(-24px,20px);
+                -ms-transform: translate(-24px,20px);
+            }
+        }
+
+        @media(min-width: 768px) {
+            .cube-loading:before {
+
+            }
+        }
+    </style>
+    
+</head></html>
+<body>
+<div class="cube-body">
+    <nav id="cube-top-memu" class="cube-menu">
+    <ul class="cube-menu-collapse">
+        
+        <li>
+            <i class="cube-icon cube-icon-home" aria-hidden="true"></i>
+            <a href="/">首页</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-archive" aria-hidden="true"></i>
+            <a href="/archives">归档</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-categories" aria-hidden="true"></i>
+            <a href="/categories">分类</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-tags" aria-hidden="true"></i>
+            <a href="/tags">标签</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-about" aria-hidden="true"></i>
+            <a href="/about">关于</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-categories" aria-hidden="true"></i>
+            <a href="/links">友链</a>
+        </li>
+        
+    </ul>
+</nav>
+<nav class="cube-side-menu" id="cube-side-menu">
+    <ul class="cube-menu-list">
+        
+        <li>
+            <a class="scroll-to-top">回到顶部</a>
+        </li>
+    </ul>
+</nav>
+    <header class="cube-header" id="cube-header">
+    <img src=" /images/background.png " alt="头部背景图片">
+    
+    <div class="cube-type">
+        <span class="cube-typed-title">code004&#39;s Blog</span>
+        <span class="cube-typed-cursor">|</span>
+    </div>
+    
+</header>
+
+    <style>
+        nav.cube-menu:before {
+            content: '';
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 44px;
+        
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+        
+            z-index: -1;
+            background-image: url('/images/background.png');
+            background-repeat: no-repeat;
+            background-position: center -156px;
+            background-size: cover;
+            background-color: transparent;
+        }
+
+        header.cube-background.cube-header-background {
+            visibility: hidden;
+            background-image: url('/images/background.png');
+            background-position: center -200px;
+        }
+    </style>
+    <header class="cube-background cube-header-background">
+        
+        <div class="cube-type">
+            <span class="cube-typed-title">code004&#39;s Blog</span>
+            <span class="cube-typed-cursor">|</span>
+        </div>
+        
+    </header>
+    <div class="load-header-background"></div>
+    <script>
+        (function (window) {
+
+            window.headerModule = {}
+            window.headerModule.image = {
+                width: '1920',
+                height: '1080'
+            }
+
+        })(window)
+    </script>
+    
+    <div class="cube-content">
+        <div class="cube-left">
+            <div class="cube-article">
+    <h1 class="title">Hexo博客搭建—从入门到精通</h1>
+    
+    <div class="cube-article-header">
+        <div class="cube-article-date">
+            <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+            <!-- moment.js对象 -->
+            2020-03-01
+        </div>
+        <div class="cube-article-tags">
+    <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+    
+    <a href="/tags/搭建/">#搭建</a>
+    
+    <a href="/tags/博客/">#博客</a>
+    
+</div>
+    </div>
+    
+    <div class="cube-article-content cube-markdown">
+        
+        <p>注：本文部分内容来自<a href="https://ouuan.github.io" rel="external nofollow noopener noreferrer" target="_blank">ouuan的博客</a>，<a href="https://ouuan.github.io/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/" rel="external nofollow noopener noreferrer" target="_blank">原文地址</a></p>
+<hr>
+<p>2020.02.13更新：关于Coding再次更新，已更改/增加相应内容。</p>
+<hr>
+<p>我一直以来认为，要弄一个自己的博客或者网站，必须到某些什么“建站工具”里购买建站套装，再自己买一个域名</p>
+<p>这样算下来，一年至少得两三百RMB</p>
+<p>而且，域名什么的配置繁杂，非常麻烦</p>
+<p>所以，一直以来我都是用的CSDN/博客园建的博客，想想SEO也做的好（SEO好就意味着你写的东西可以在百度/谷歌等搜索引擎上被别人查到），也就没什么怨言</p>
+<p>但是，众所周知，CSDN和博客园的广告一大堆，根本不是我能容忍的</p>
+<p>而且，无论选择什么主题，都难看得要死qwq</p>
+<p>（当然了，最近有一位dalao弄出了博客园的极致美化，请看<a href="https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/" target="_blank" rel="noopener">BNDong/Cnblogs-Theme-SimpleMemory</a>，这个其实还不错）</p>
+<p>就在今年3月份，我才知道还有这样一个东西的存在</p>
+<p>Hexo</p>
+<p>这个东西可以帮你快速将您用markdown和Latex写的文章渲染为html文件，并借助Github/Coding/Gitee Pages快速发布。</p>
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>阅读完本文后，您可以做到：</p>
+<ul>
+<li>一分钱不花搭建一个美丽而简洁的博客（具体由主题决定）</li>
+<li>拥有一个（或者多个）简短的免费顶级域名</li>
+<li>限制您的博客仅限某些IP地址访问，或者拒绝某些IP地址访问</li>
+<li>轻松写作/发布博客</li>
+<li>做好百度与谷歌的SEO优化，其他搜索引擎类似</li>
+</ul>
+<p>注：如果您要查看某个功能的设置，请直接点击文章左边的目录（TOC）直达</p>
+<p>本文基于Hexo 3.9.0，文中不会提及因不同版本造成的差异（不过其实也没什么差异qwq</p>
+<p>本文中提到的node.js和git安装仅适用于Windows，如果您使用其他系统请自行搜索下载</p>
+<a id="more"></a>
+
+<h1 id="Github-Coding-Gitee设置"><a href="#Github-Coding-Gitee设置" class="headerlink" title="Github/Coding/Gitee设置"></a>Github/Coding/Gitee设置</h1><p>首先，您需要在 Github, Coding, Gitee 中选择一个：</p>
+<p>Github：拥有最悠久的历史，最稳定，但是在国外，所以可能导致建完后您的blog访问速度慢一些</p>
+<p>Coding：最近又各种服务更改，总之不是十分稳定，我之前绑定的域名在更换到企业版后全没了/(ㄒoㄒ)/ 搭建Pages必须手机+身份证号码认证</p>
+<p>Gitee：后起之秀，也不错，不过搭建Pages也必须手机验证，也不是十分稳定</p>
+<p>综上，您可以选择一个平台进行操作，也可以多个平台都操作（建议最多选择两个平台，一个国外一个国内）。如果您选择的是单个平台，请通过左边目录直达；如果您选择多个平台，请依次按照每个平台的教程进行设置。</p>
+<p>如果求方便，推荐直接Github或者直接Coding</p>
+<p>如果希望国内外都可以很快访问，建议Github+Coding</p>
+<p>Gitee的话，个人不太了解也没太大兴趣去研究，所以下文中并不会详细讲解qwq，欢迎自行尝试并在评论区分享</p>
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>首先，登录或者注册一个Github账号</p>
+<p>然后，如图所示，点击右上角的加号，选择<code>New repository</code>，</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/github1.png" alt="github1"></p>
+<p>然后，看到如下界面：</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/github2.png" alt="github2"></p>
+<p>请在我填写xxx.github.io的位置把xxx换成你自己的Github用户名</p>
+<p>在下面的Description里，可以写也可以不写，写了也没什么用qwq</p>
+<p>下面必须选择Public，千万不要选择Private</p>
+<p>下面的<code>Initialize this repository with a README</code>请不要勾选</p>
+<p>好的，如果看到下面的界面，说明成功了（请自行把xxx换成您的github用户名）</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/github3.png" alt="github3"></p>
+<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><del>Coding原来在<a href="https://coding.net" rel="external nofollow noopener noreferrer" target="_blank">coding.net</a>，但是最近它的个人版和腾讯云开发者平台合并，如果您是之前Coding的用户，请从<a href="https://coding.net/login" rel="external nofollow noopener noreferrer" target="_blank">coding个人版登录</a>界面使用您原来的Coding账号/密码登录，并跳转至腾讯云开发者平台，切记要绑定邮箱，否则就只能使用微信登录</del></p>
+<p><del>如果您不是Coding用户，请自行前往<a href="https://cloud.tencent.com/register" rel="external nofollow noopener noreferrer" target="_blank">腾讯云注册界面</a>使用微信/QQ/邮箱注册（需要验证手机号）</del></p>
+<p><del>注册/登录完成后，请前往<a href="https://dev.tencent.com/user" rel="external nofollow noopener noreferrer" target="_blank">腾讯云开发者平台用户页</a>，点击加号，选择项目，如下图：</del></p>
+<p>注：Coding近期会自动帮个人用户升级为免费的企业版，请使用 <a href="https://coding.net" rel="external nofollow noopener noreferrer" target="_blank">https://coding.net</a> 首页右上角注册，注册成功并登录后，按照下图类似的位置可以找到新建项目：</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/coding1.png" alt="coding1"></p>
+<p>然后填写项目名称，就是<code>xxx.coding.me</code>（请自行将<code>xxx</code>替换为您的用户名）</p>
+<p>注：更新后发现，在Coding中项目名称不影响效果，故可以随便填写，但为了方便区别您的blog与其它项目的repo，建议还是按<code>xxx.coding.me</code>来</p>
+<p>完毕后，请点击左边列表的第二项（“代码”），如果看到下图界面，说明成功：</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/coding2.png" alt="coding2"></p>
+<h2 id="Gitee"><a href="#Gitee" class="headerlink" title="Gitee"></a>Gitee</h2><p>Gitee是一个很典型的后起之秀，不过流程也很简单，还可以使用Github登录。请在<a href="https://gitee.com/signup" rel="external nofollow noopener noreferrer" target="_blank">Gitee注册界面</a>进行注册，在<a href="https://gitee.com/login" rel="external nofollow noopener noreferrer" target="_blank">Gitee登录界面</a>进行登录。</p>
+<p>同上，不再过多叙述。点击右上角的加号，选择新建项目即可。</p>
+<h1 id="本地安装Hexo"><a href="#本地安装Hexo" class="headerlink" title="本地安装Hexo"></a>本地安装Hexo</h1><p>请在您的计算机中安装：</p>
+<ul>
+<li><a href="https://gitforwindows.org/" rel="external nofollow noopener noreferrer" target="_blank">Git</a></li>
+<li><a href="https://nodejs.org/en/" rel="external nofollow noopener noreferrer" target="_blank">node.js</a></li>
+</ul>
+<p>安装路径可以根据喜好更改，最好按默认</p>
+<p>建议node.js安装的时候选择左边的绿按钮，稳定版本更好，开发版本可能不稳定</p>
+<p>请在cmd中使用 <code>node -v</code>, <code>npm -v</code> 和 <code>git --version</code> 检查是否安装成功。如果成功，应返回一行含有版本号的字符串，而不是<code>xxx 不是内部或外部命令，也不是可运行的程序或批处理文件。</code>，如果node或者npm不成功，请重新安装nodejs；如果git不成功，请重新安装git。</p>
+<p>如果您已经安装Git和node.js，只是版本比较旧，您无需再次进行安装或进行更新</p>
+<p>安装后，请从开始菜单打开Git Bash或者在任意位置右键选择Git Bash Here</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/git-bash.png" alt="git-bash"></p>
+<p>输入:<code>npm install -g hexo</code>，可能并不能复制粘贴，请手打qwq</p>
+<p>如果地址被墙，请自行科学上网或者输入<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code>切换到淘宝镜像后输入<code>cnpm install -g hexo</code></p>
+<p>等待片刻后会有一些提示和警告，可以忽略。完成后请使用<code>hexo -v</code>来检查是否安装成功</p>
+<p>接着，在任意位置创建一个文件夹，名字任意，最好不要有一些奇奇怪怪的字符</p>
+<p>这个文件夹将用于存储你的blog的所有信息，包括设置/插件/页面的markdown文件/文章的markdown文件，随着文章/页面与插件的数量增加而增加，<strong>可以占到50M~1G，请谨慎选好位置</strong>，由于文件很多，事后移动耗时很长</p>
+<p>接下来，在你刚刚创建的文件夹里（后文称为<strong><em>站点目录</em></strong>）右键单击，选择Git Bash Here</p>
+<p>输入命令：<code>hexo init</code></p>
+<p>等待一会，您可以看到您选择的主文件夹里多了这些文件/文件夹：</p>
+<ul>
+<li>node_modules</li>
+<li>scaffolds</li>
+<li>source</li>
+<li>themes</li>
+<li>_config.yml</li>
+<li>package.json</li>
+</ul>
+<p>其中，node_modules是用来存放您使用npm下载的插件的，scaffolds是文章模板，您稍后创建的文章会按照模板创建，可以对模板进行修改，但这些都到一切设置完毕了以后再说吧</p>
+<p>source用来存放您所有文章/页面的markdown代码或者HTML代码，themes用来存放您稍后下载的主题文件（默认主题landscape），_config.yml则是用来进行站点配置的，在后文中会被称为<strong><em>站点配置文件</em></strong></p>
+<p>package.json用来存放您下载插件的目录，平常不要修改为好</p>
+<p>请接着输入<code>npm install</code>来下载一些需要的包，等待下载完毕后，请打开<strong><em>站点配置文件</em></strong>，做以下基本配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexo Configuration</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></span><br><span class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">博客标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">博客副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">博客描述（可以填写</span> <span class="string">xxx的博客）</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">语言，稍后根据主题进行设置</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">时区，不建议设置</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">域名，可以暂时按照默认的</span> <span class="string">http://yoursite.com</span> <span class="string">进行设置，稍后更改</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">不用管</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">不用管，稍后SEO优化时会用到</span></span><br></pre></td></tr></table></figure>
+
+<p>如上进行部分设置后，请在<strong><em>站点目录</em></strong>中右键Git Bash Here，输入<code>hexo s</code>，打开浏览器，地址栏输入<code>localhost:4000</code>即可查看（这里的<code>hexo s</code>是<code>hexo server</code>的缩写，请在“发布博客”一章末尾详细查看）</p>
+<p>如果4000端口冲突，请使用cmd进行<code>taskkill /f /im 4000</code>或者使用<code>hexo s -p 4001</code>修改到4001端口</p>
+<p>如果您看到以下界面，说明成功：</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/hexo-show.png" alt="hexo-show"></p>
+<p>请同时按下Ctrl+C来关闭窗口（若出现类似于<code>终止批处理操作吗(Y/N)?</code>的提示，输入<code>y</code>即可）</p>
+<p>如果没有，请按照上述步骤重试</p>
+<p>好的，接下来就是挑选主题的时候了qwq</p>
+<h1 id="主题选择与下载切换"><a href="#主题选择与下载切换" class="headerlink" title="主题选择与下载切换"></a>主题选择与下载切换</h1><p>好的，我们来看一下<a href="https://hexo.io" rel="external nofollow noopener noreferrer" target="_blank">hexo官网</a>的<a href="https://hexo.io/themes" rel="external nofollow noopener noreferrer" target="_blank">主题列表</a></p>
+<p>天啊，这么多！</p>
+<p>没错，慢慢挑吧qwq</p>
+<p>当然了，也可以利用搜索功能，如果您喜欢material design，不妨搜索标签material（顺便安利一波我的主题Materialized）</p>
+<p>推荐几个：</p>
+<ol>
+<li>NexT，非常火爆，人气很高</li>
+<li>Jacman，简洁明了，加载快速</li>
+<li>Material（最新版有Bug，请使用1.5.2而不要使用1.5.3及以上版本）</li>
+<li>Butterfly，适合游记比较多的博客，图片功能完善</li>
+<li>Materialized，加载快速，Material化</li>
+</ol>
+<p>如上，对每个主题，点击预览图片会进入预览网站，点击蓝色的主题名称会进入相应的Github repo。</p>
+<p>若主题README中无特殊说明，请使用下面命令进行主题复制：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/xxx/xxx themes/xxx</span><br></pre></td></tr></table></figure>
+
+<p>（上面的<code>https://github.com/xxx/xxx</code>请替换为主题repo地址，<code>themes/xxx</code>的xxx请替换为主题名称）</p>
+<p>要使用一个主题，请先打开<strong><em>站点配置文件</em></strong>，将<code>themes: landscape</code>改为<code>themes: xxx</code>（xxx为主题在themes下的目录名字，就是刚刚代码里的主题名称）</p>
+<p>比如，我把next主题通过<code>git clone</code>到了themes目录下，就把<strong><em>站点配置文件</em></strong>中的themes选项改为next即可</p>
+<p>在每个主题下都有一个<code>_config.yml</code>文件，它被称为<strong><em>主题配置文件</em></strong>，用来对主题进行自定义设置（注意，主题的语言设置在站点配置文件里）</p>
+<p>好的，接下来，我以NexT主题为例，带领您领略一下主题中多样的功能</p>
+<p>（本文基于next 7.1.2，之所以我不更新是因为7.3.0改动太大，导致很多地方不美观，7.2.0取消了自定义设置）</p>
+<p>（Update:后来看了ouuan dalao博客的评论以后发现，7.2.0及以上版本的NexT主题在主题配置文件里有一个<code>custom_file_path</code>选项，把里面的<code>style</code>取消注释并在相应的目录添加一个相应的文件，放入自定义设置的代码即可）</p>
+<h1 id="NexT主题基础配置"><a href="#NexT主题基础配置" class="headerlink" title="NexT主题基础配置"></a>NexT主题基础配置</h1><p>请打开next主题的<strong><em>主题配置文件</em></strong>，Ctrl+F搜索<code>Scheme Settings</code>，找到下面选项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Scheme Settings</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+
+<p>这里的<code>Muse</code> <code>Mist</code> <code>Pisces</code> <code>Gemini</code>可以理解为NexT的四个小主题</p>
+<p>截图如下：</p>
+<p>Muse:</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/muse.png" alt="Muse"></p>
+<p>Mist:</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/mist.png" alt="Mist"></p>
+<p>Pisces:</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/pisces.png" alt="Pisces"></p>
+<p>Gemini:</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/gemini.png" alt="Gemini"></p>
+<p>默认是Muse，个人推荐Gemini，Pisces和Gemini的区别就是Gemini更宽松一些，Mist也不错</p>
+<p>如果想用Muse的话，还是先找好背景图片再说吧… 否则…</p>
+<p>PS：如果想查看自己网站的效果，可以随时保存修改然后<code>hexo s</code></p>
+<p>请继续在<strong><em>主题配置文件</em></strong>中Ctrl+F搜索<code>powered</code>，可以找到下面选项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">powered:</span></span><br><span class="line">  <span class="comment"># Hexo link (Powered by Hexo).</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Version info of Hexo after Hexo link (vX.X.X).</span></span><br><span class="line">  <span class="attr">version:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="attr">theme:</span></span><br><span class="line">  <span class="comment"># Theme &amp; scheme info link (Theme - NexT.scheme).</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Version info of NexT after scheme info (vX.X.X).</span></span><br><span class="line">  <span class="attr">version:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>这会让博客生成后底部存在“由Hexo强力驱动 V3.9.0”和“主题：NexT V7.1.2”（文字我不太记得清楚了qwq）</p>
+<p>如果您想给hexo或者next主题打广告，请跳过此段</p>
+<p>如果您想博客底部干净整洁，请把上面片段中所有<code>true</code>改成<code>false</code>（<code>theme.enable</code>选项必须保持<code>true</code>）</p>
+<p><strong>安全警告：根据NexT主题的LICENSE，您应该确保theme.enable选项打开，</strong><a href="https://github.com/theme-next/hexo-theme-next/blob/master/LICENSE.md" target="_blank" rel="noopener">NexT主题LICENSE</a>原文节选如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">c) A covered work must retain «NexT» official website link (https://theme-next.org) in footer section of every website created, modified or manipulated by using «NexT». «NexT» theme configuration must be:</span><br><span class="line"></span><br><span class="line">footer:</span><br><span class="line">  theme:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure>
+
+<p>接下来，请继续在<strong><em>主题配置文件</em></strong>中找到以下内容（请自行Ctrl+F搜索）</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Menu Settings</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -&gt; archives).</span></span><br><span class="line"><span class="comment"># Usage: `Key: /link/ || icon`</span></span><br><span class="line"><span class="comment"># Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-senstive.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target link.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.</span></span><br><span class="line"><span class="comment"># External url should start with http:// or https://</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line">  <span class="comment">#about: /about/ || user</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line">  <span class="attr">links:</span> <span class="string">/links/</span> <span class="string">||</span> <span class="string">link</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">/message/</span> <span class="string">||</span> <span class="string">comments</span></span><br><span class="line">  <span class="attr">following:</span> <span class="string">/following/</span> <span class="string">||</span> <span class="string">group</span></span><br><span class="line">  <span class="attr">codes:</span> <span class="string">/codes/</span> <span class="string">||</span> <span class="string">file-code-o</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure>
+
+<p>这里就是主菜单设置了，也就是Muse中间的，Mist上面的，Pisces和Gemini左边/右边的菜单</p>
+<p>格式很简单，可以写成这样：<code>{name}: {link} || {icon}</code></p>
+<p><code>{name}</code>是指显示在菜单中的名称，比如categories和tags，就是分类和标签</p>
+<p><strong>注意：分类和标签页面需要自己创建：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>随后在<code>source/tags/index.md</code>中<code>front-matter</code>里输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type: tags</span><br></pre></td></tr></table></figure>
+
+<p>注：某些主题也可能是<code>layout: tags</code>，根据主题决定。</p>
+<p>分类界面也是如此，把<code>tags</code>改成<code>categories</code>即可。</p>
+<p>回到菜单设置，<code>{link}</code>是指链接地址，可以为两种形式：</p>
+<ul>
+<li>链接到某个网站：<a href="http://xxx.com" rel="external nofollow noopener noreferrer" target="_blank">http://xxx.com</a> 或者 <a href="https://xxx.com" rel="external nofollow noopener noreferrer" target="_blank">https://xxx.com</a></li>
+</ul>
+<p><strong>注意！链接到某个网站请不要直接输入域名（baidu.com），请务必输入 <a href="http://baidu.com" rel="external nofollow noopener noreferrer" target="_blank">http://baidu.com</a> 或者 <a href="https://baidu.com" rel="external nofollow noopener noreferrer" target="_blank">https://baidu.com</a></strong></p>
+<ul>
+<li>博客的子链接：/xxx/ （xxx是指页面的名称，在后文会提到）</li>
+</ul>
+<p><code>{icon}</code>是指图标名称，请在<a href="http://fontawesome.dashgame.com/" rel="external nofollow noopener noreferrer" target="_blank">Font Awesome</a>查找，查找方式如下：</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/fontawesome.png" alt="Font Awesome"></p>
+<p>比如我想菜单里有第二行第一个图标（那个黑白半圆的），只需要把上面的<code>{icon}</code>替换为<code>adjust</code>即可</p>
+<p>这下面还有这个设置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Enable / Disable menu icons / item badges.</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>这个基本上不用管，如果你真的不想在菜单里显示图标，请把<code>icons</code>设置为<code>false</code></p>
+<p>好的，接下来请找到下面的侧边栏设置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Sidebar Settings</span></span><br><span class="line"><span class="comment"># See: https://theme-next.org/docs/theme-settings/sidebar</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Posts / Categories / Tags in sidebar.</span></span><br><span class="line"><span class="attr">site_state:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Social Links</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/code004Accepted</span> <span class="string">||</span> <span class="string">github</span></span><br><span class="line">  <span class="attr">E-Mail:</span> <span class="string">mailto:code004@qq.com</span> <span class="string">||</span> <span class="string">envelope</span></span><br><span class="line">  <span class="attr">Google:</span> <span class="string">https://plus.google.com/code004Accepted</span> <span class="string">||</span> <span class="string">google</span></span><br><span class="line">  <span class="attr">Twitter:</span> <span class="string">https://twitter.com/brianchen2006</span> <span class="string">||</span> <span class="string">twitter</span></span><br><span class="line">  <span class="attr">YouTube:</span> <span class="string">https://youtube.com/code004Accepted</span> <span class="string">||</span> <span class="string">youtube</span></span><br><span class="line">  <span class="attr">Instagram:</span> <span class="string">https://instagram.com/brianchen2019</span> <span class="string">||</span> <span class="string">instagram</span></span><br><span class="line">  <span class="attr">Skype:</span> <span class="string">skype:code004?call|chat</span> <span class="string">||</span> <span class="string">skype</span></span><br><span class="line">  <span class="attr">Codepen:</span> <span class="string">https://codepen.io/code004Accepted/</span> <span class="string">||</span> <span class="string">codepen</span></span><br><span class="line">  <span class="attr">Ask.fm:</span> <span class="string">https://ask.fm/code004</span> <span class="string">||</span> <span class="string">question</span></span><br><span class="line">  <span class="attr">LGOJ:</span> <span class="string">https://www.luogu.org/space/show?uid=228062</span> <span class="string">||</span> <span class="string">code</span></span><br><span class="line"></span><br><span class="line"><span class="attr">social_icons:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">icons_only:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">transition:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Blog rolls</span></span><br><span class="line"><span class="attr">links_icon:</span> <span class="string">link</span></span><br><span class="line"><span class="attr">links_title:</span> <span class="string">友情链接</span></span><br><span class="line"><span class="attr">links_layout:</span> <span class="string">block</span></span><br><span class="line"><span class="comment">#links_layout: inline</span></span><br><span class="line"><span class="attr">links:</span></span><br><span class="line">  <span class="comment"># Standred C++: https://isocpp.org</span></span><br><span class="line">  <span class="comment"># Cloudflare: https://cloudflare.com</span></span><br><span class="line">  <span class="comment"># Python: https://www.python.org</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># In theme directory (source/images): /images/avatar.gif</span></span><br><span class="line">  <span class="comment"># In site directory (source/uploads): /uploads/avatar.gif</span></span><br><span class="line">  <span class="comment"># You can also use other linking images.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/avatar.jpg</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be dispalyed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.</span></span><br><span class="line">  <span class="attr">opacity:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Table Of Contents in the Sidebar</span></span><br><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Automatically add list number to toc.</span></span><br><span class="line">  <span class="attr">number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, all words will placed on next lines if header width longer then sidebar width.</span></span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># If true, all level of TOC in a post will be displayed, rather than the activated part of it.</span></span><br><span class="line">  <span class="attr">expand_all:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front-matter.</span></span><br><span class="line">  <span class="attr">max_depth:</span> <span class="number">6</span></span><br><span class="line"></span><br><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="comment"># Sidebar Position, available values: left | right (only for Pisces | Gemini).</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">left</span></span><br><span class="line">  <span class="comment">#position: right</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Manual define the sidebar width. If commented, will be default for:</span></span><br><span class="line">  <span class="comment"># Muse | Mist: 320</span></span><br><span class="line">  <span class="comment"># Pisces | Gemini: 240</span></span><br><span class="line">  <span class="comment">#width: 300</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Sidebar Display, available values (only for Muse | Mist):</span></span><br><span class="line">  <span class="comment">#  - post    expand on posts automatically. Default.</span></span><br><span class="line">  <span class="comment">#  - always  expand for all pages automatically.</span></span><br><span class="line">  <span class="comment">#  - hide    expand only when click on the sidebar toggle icon.</span></span><br><span class="line">  <span class="comment">#  - remove  totally remove sidebar including sidebar toggle.</span></span><br><span class="line">  <span class="attr">display:</span> <span class="string">post</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Sidebar offset from top menubar in pixels (only for Pisces | Gemini).</span></span><br><span class="line">  <span class="attr">offset:</span> <span class="number">12</span></span><br><span class="line">  <span class="comment"># Enable sidebar on narrow view (only for Muse | Mist).</span></span><br><span class="line">  <span class="attr">onmobile:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Click any blank part of the page to close sidebar (only for Muse | Mist).</span></span><br><span class="line">  <span class="attr">dimmer:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">back2top:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Back to top in sidebar.</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line">  <span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># A button to open designated chat widget in sidebar.</span></span><br><span class="line"><span class="comment"># Firstly, you need enable the chat service you want to activate its sidebar button.</span></span><br><span class="line"><span class="attr">chat:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment">#service: chatra</span></span><br><span class="line">  <span class="comment">#service: tidio</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">comment</span> <span class="comment"># icon in Font Awesome 4, set false to disable icon</span></span><br><span class="line">  <span class="attr">text:</span> <span class="string">Chat</span> <span class="comment"># button text, change it as you wish</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/sidebar.png" alt="sidebar"></p>
+<p>如图所示，<code>site_state</code>就是在侧边栏中显示您博客的文章（日志）数量/分类数量/标签数量，就是上图的1</p>
+<p><code>social</code>以及它下面的许许多多的选项就是图中的2，图标同样可以修改</p>
+<p>而底下的<code>links</code>则是友情链接设置，由于友情链接太多所以我单独开了一个页面来放，各位可能看不到侧边栏友情链接的效果qwq 欢迎前往其他人的blog查看</p>
+<p>注意到，友情链接里有<code>links_layout</code>选项，给出了两种设置：<code>block</code>与<code>inline</code></p>
+<p>说直白点，<code>block</code>就是一行一个，每个居中；<code>inline</code>就是一行多个，把每行都尽可能填满，居中</p>
+<p>接下来的<code>avatar</code>设置就是侧边栏头像，请将头像放到next主题目录下的<code>source/images</code>文件夹中，然后输入<code>/images/avatar.jpg</code>（avatar.jpg是文件名，可随意修改）</p>
+<p>当然了，按照配置文件的说明，您也可以放到站点目录下的<code>source/images</code>文件夹中，然后输入<code>/uploads/avatar.jpg</code>，不过我并不推荐这种方式，我也并未尝试过，所以还是请使用上面一种方式</p>
+<p>注意到，关于侧边栏头像的还有几个设置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">opacity:</span> <span class="number">1</span></span><br><span class="line"><span class="attr">rotated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>rounded</code>是指是否让头像呈圆形（就是以正方形头像的对角线交点为原点，正方形边长的一半为半径，画出来一个圆，只有圆内的头像会显示出来 <del>哎呀怎么这么复杂</del>），<code>opacity</code>是指头像的不透明度（注意不是透明度），设置为1表示完全不透明，建议0.9~1，<code>rotated</code>表示头像是否随鼠标旋转（就是鼠标移上去的时候头像是否转），<code>rotated</code>设置为<code>true</code>以后，鼠标移上头像就会顺时针旋转一整圈（360°），鼠标移下来就会逆时针转回去</p>
+<p>下面可以找到<code>toc</code>的设置，这个设置的作用是浏览文章时可以通过侧边栏的目录直达某一个大标题或者一个小标题（不就是目录吗…</p>
+<p><code>toc</code>的选项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">number:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">wrap:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">expand_all:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">max_depth:</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
+
+<p>解释一下，<code>number</code>是指自动为标题加上编号，比如会有<code>3</code>的大标题编号，3下面的小标题就自然命名为<code>3.1</code>，<code>3.2</code>，更小的就是<code>3.1.1</code>… 可以根据个人喜好设置</p>
+<p><code>wrap</code>开启后，当标题长度大于侧边栏长度时，自动换行，不推荐</p>
+<p><code>expand_all</code>是指自动展开所有标题</p>
+<p>当<code>expand_all</code>设置为<code>false</code>时，不自动展开标题，换句话说就是当你点到1的大标题时才会展开1.1 1.2这些小标题，当你点击1.2时才会再显示1.2.1 1.2.2之类的更小的标题</p>
+<p>但是，一旦<code>expand_all</code>被打开，你的所有文章的所有标题都会直接被显示出来，会很乱，不过也可以根据个人喜好吧qwq</p>
+<p><code>max_depth</code>表示标题探索深度，Markdown只有6层标题，所以最多设置为6，如果你只想让目录显示1/2/3级的大标题，输入3即可，不推荐更改</p>
+<p>好的，底下有一长串的侧边栏位置设置，如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="comment"># Sidebar Position, available values: left | right (only for Pisces | Gemini).</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">left</span></span><br><span class="line">  <span class="comment">#position: right</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Manual define the sidebar width. If commented, will be default for:</span></span><br><span class="line">  <span class="comment"># Muse | Mist: 320</span></span><br><span class="line">  <span class="comment"># Pisces | Gemini: 240</span></span><br><span class="line">  <span class="comment">#width: 300</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Sidebar Display, available values (only for Muse | Mist):</span></span><br><span class="line">  <span class="comment">#  - post    expand on posts automatically. Default.</span></span><br><span class="line">  <span class="comment">#  - always  expand for all pages automatically.</span></span><br><span class="line">  <span class="comment">#  - hide    expand only when click on the sidebar toggle icon.</span></span><br><span class="line">  <span class="comment">#  - remove  totally remove sidebar including sidebar toggle.</span></span><br><span class="line">  <span class="attr">display:</span> <span class="string">post</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Sidebar offset from top menubar in pixels (only for Pisces | Gemini).</span></span><br><span class="line">  <span class="attr">offset:</span> <span class="number">12</span></span><br><span class="line">  <span class="comment"># Enable sidebar on narrow view (only for Muse | Mist).</span></span><br><span class="line">  <span class="attr">onmobile:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Click any blank part of the page to close sidebar (only for Muse | Mist).</span></span><br><span class="line">  <span class="attr">dimmer:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>首先有个<code>position</code>的设置，意思是侧边栏是在左边还是右边，只对<code>Pisces</code>和<code>Gemini</code>两个小主题有效</p>
+<p>然后底下有个被加注释的<code>width</code>设置，就是手动设置侧边栏宽度，极度不推荐（除非你有特别长的介绍/友链/文章标题…）</p>
+<p>有一个<code>display</code>设置，这个设置只对<code>Muse</code>和<code>Mist</code>有效，有四个设置值：</p>
+<ul>
+<li>post 当打开文章界面的时候，侧边栏自动弹出，但在首页/分类页/归档页等不会自动弹出，需手动点击按钮展开</li>
+<li>always 在所有页面自动弹出</li>
+<li>hide 在所有页面都不弹出，只在点击按钮时展开</li>
+<li>remove 连按钮都不显示，完整地删除侧边栏</li>
+</ul>
+<p>个人建议post或者always，按个人喜好选择</p>
+<p>接下来有一个<code>offset</code>的设置，这个是指头像到侧边栏顶部的距离，默认即可，只对<code>Pisces</code>和<code>Gemini</code>有效</p>
+<p>然后有一个<code>onmobile</code>的设置，只对<code>Muse</code>和<code>Mist</code>有效，是指在手机或者很窄的浏览器中也显示侧边栏，不建议开启</p>
+<p>最后一个<code>dimmer</code>的设置，也只对<code>Muse</code>和<code>Mist</code>有效，是指打开侧边栏后点击页面任意位置关闭侧边栏，建议开启</p>
+<p>好的，继续看侧边栏的设置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">back2top:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Back to top in sidebar.</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line">  <span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># A button to open designated chat widget in sidebar.</span></span><br><span class="line"><span class="comment"># Firstly, you need enable the chat service you want to activate its sidebar button.</span></span><br><span class="line"><span class="attr">chat:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment">#service: chatra</span></span><br><span class="line">  <span class="comment">#service: tidio</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">comment</span> <span class="comment"># icon in Font Awesome 4, set false to disable icon</span></span><br><span class="line">  <span class="attr">text:</span> <span class="string">Chat</span> <span class="comment"># button text, change it as you wish</span></span><br></pre></td></tr></table></figure>
+
+<p>一共是<code>back2top</code>和<code>chat</code>两个设置，<code>back2top</code>是指侧边栏底部的回到顶部按钮，建议开启，<code>scrollpercent</code>是指在按钮旁边显示页面已经阅读百分之多少，详见上面图片里的4</p>
+<p><code>chat</code>是在侧边栏的聊天按钮设置，建议不要开启，设置麻烦，而且Bug很多，会导致博客加载很慢</p>
+<p>好的，侧边栏设置到此结束，现在基本上你已经配置好NexT主题的界面了，不过…你的网站还是本地的！先讲一下pages搭建，再继续谈NexT和其它主题的配置及高级优化吧qwq</p>
+<h1 id="测试发布博客"><a href="#测试发布博客" class="headerlink" title="测试发布博客"></a>测试发布博客</h1><p>现在，你应该还什么文章都没写吧qwq 不过在之前的<code>hexo s</code>的时候可以看到，你的博客里已经有一篇Hello World的文章了！这是Hexo帮你写的，里面也有一些教你写文章的说明，这个等会在解释</p>
+<p>现在最重要的是，怎么发布你的博客… 你总不可能让你的朋友们都来你的电脑上才能看到博客吧！</p>
+<p>好的，废话不多说，我们来先讲一下怎么把你的博客发布到Github/Coding/Gitee</p>
+<p>为了把本地仓库的内容传送到GitHub上，需要配置ssh key，你可以把ssh key理解为一个身份验证码，在你把你的博客或者其他内容传送到Github上时，你需要进行身份验证。无论是你的博客还是其他代码仓库都是如此（不然别人就可以随便瞎改你的代码仓库了）</p>
+<p>在Git Bash中输入：<code>ssh-keygen -t rsa -C {email}</code>，请把<code>{email}</code>替换为你注册Github所用的邮箱</p>
+<p>直接按下三次Enter键默认即可，会把ssh key存到<code>C:\Users\Administrator\.ssh</code>里，如果你的计算机用户名不是Administrator，也不用担心，Git会帮你把一切办好</p>
+<p>好的，ssh密钥生成成功，请打开上面的地址<code>C:\Users\Administrator\.ssh</code>，里面有一个<code>id_rsa.pub</code>文件，这就是你的ssh key的公钥了（不懂公钥请忽略）</p>
+<p>右键使用记事本或者你的文本编辑器打开，复制里面的内容，回到Github/Coding/Gitee并登录</p>
+<p>下面的设置差不多，就只讲Github的</p>
+<p>在Github中点击自己头像，选择Settings，然后选择左边的<code>SSH and GPG keys</code>，点击右上角的绿色按钮<code>New SSH key</code>会看到这个界面：</p>
+<p><img src="/posts/how-to-build-a-hexo-blog - Copy/ssh-key.png" alt="SSH keys"></p>
+<p>请把刚刚复制的密钥粘贴到<code>Key</code>框中，<code>Title</code>可以随便写，好像不写也可以，然后点击绿色按钮<code>Add SSH key</code></p>
+<p>接下来，需要在本地验证一下是否成功，在Git Bash中输入<code>ssh -T git@github.com</code>，如果提示<code>Hi {username}! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>就说明SSH配置成功，<code>{username}</code>应该是你的Github用户名</p>
+<p>这里说一下，如果是Coding要验证，请在Git Bash中输入<code>ssh -T git@e.coding.net</code>，如果提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Coding 提示: Hello &#123;username&#125;, You&apos;ve connected to Coding.net via SSH. This is a personal key. &#123;username&#125;，你好，你已经通过 SSH 协议认证 Coding.net 服务，这是一个个人公钥</span><br></pre></td></tr></table></figure>
+
+<p>说明SSH配置成功，<code>{username}</code>应该是你的Coding用户名</p>
+<p>Gitee也是同样的道理，<code>ssh -T git@gitee.com</code>即可</p>
+<p>接下来，我们需要安装一个帮助我们把blog发布到Git仓库的包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>（如果您配置了<code>cnpm</code>也可以将<code>npm</code>改为<code>cnpm</code>）</p>
+<p>好的，现在你已经能正常连接到Github/Coding/Gitee了，请打开<strong><em>站点配置文件</em></strong>，复制并粘贴到文件末尾（如果已经有类似设置请覆盖）：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> </span><br><span class="line">    <span class="attr">github:</span> <span class="string">git@github.com:&#123;username&#125;/&#123;username&#125;.github.io.git</span></span><br></pre></td></tr></table></figure>
+
+<p>（如果文件本身就有这项设置，请先删除原来的空白设置）</p>
+<p>注意：</p>
+<p><del>1. 不知道为什么，好像用<a href="mailto:git@git.coding.net" rel="external nofollow noopener noreferrer" target="_blank">git@git.coding.net</a>部署Coding会报错，所以请用https连接</del></p>
+<p>（Coding再次改版后已不再出现类似错误）</p>
+<ol start="2">
+<li>之前选择了多个平台的，依次往下写即可，比如：</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> </span><br><span class="line">    <span class="attr">github:</span> <span class="string">git@github.com:&#123;username&#125;/&#123;username&#125;.github.io.git</span></span><br><span class="line">    <span class="attr">coding:</span> <span class="string">git@e.coding.net:&#123;username&#125;/&#123;username&#125;.coding.me.git</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>请注意，不要直接复制代码就开干，请把<code>{username}</code>替换过来！</li>
+<li>千万注意：<code>github:</code>后面要有一个空格，你继续写的也是一样，否则会出现错误</li>
+</ol>
+<p>Github那行的所有<code>{username}</code>换成你的Github用户名，Coding那行的所有<code>{username}</code>换成你的Coding用户名，Gitee的请自己百度或者直接在项目地址选择<code>克隆/下载</code>然后复制里面给的连接</p>
+<p>好的，请记得要保存站点配置文件，可以开始发布了</p>
+<p>（温馨提示：以后在发布前建议先使用<code>hexo s</code>检查界面是否有Bug或者Markdown是否崩了等等）</p>
+<p>PS：在发布之前请先执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;(Username)&quot;</span><br><span class="line">git config --global user.email &quot;(Email)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>username和email可以采用Github/Coding注册的用户名和邮箱</p>
+<p>发布指令（在Git Bash中执行）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>等待数十秒甚至几分钟（取决于网速）后，如果您看到：<code>INFO  Deploy done: git</code></p>
+<p>恭喜！成功了！</p>
+<p>如果出现一大堆什么 at xxx.xxx 之类的，说明可能由于主题配置或者站点配置问题，导致某些设置无法被识别，从而出现错误，<strong>记住，所有在两个配置文件中的设置，形如<code>xxx: xxx</code>的必须在冒号后打一个空格！</strong>（当然了，如果<code>hexo s</code>无错误，但发布时出错，说明肯定是你发布的配置有问题，比如把github打成guthub之类的低级拼写错误）</p>
+<p>这时候，应该可以通过访问 <a href="http://xxx.github.io" rel="external nofollow noopener noreferrer" target="_blank">http://xxx.github.io</a> （请自行将xxx换成您的Github用户名）或者 <a href="http://xxx.coding.me" rel="external nofollow noopener noreferrer" target="_blank">http://xxx.coding.me</a> （请自行将xxx换成您的Coding用户名）等等来查看您的博客了qwq（如果提示<code>404 There isn&#39;t a GitHub Pages site here.</code>等，请进入相应的repo，选择Settings，在Github Pages中选择master分支即可）</p>
+<p><strong>更新：由于Coding再次更新，请忽略上文中的xxx.coding.me地址。请在Coding中相应的代码仓库的静态Pages页面查看</strong></p>
+<p>备注：</p>
+<ol>
+<li><code>hexo s</code>是<code>hexo server</code>的缩写，在本地预览站点</li>
+<li><code>hexo cl</code>是<code>hexo clean</code>的缩写，删除上次生成的站点HTML文件</li>
+<li><code>hexo g</code>是<code>hexo generate</code>的缩写，生成站点HTML文件</li>
+<li><code>hexo d</code>是<code>hexo deploy</code>的缩写，把生成的站点HTML文件发布到git仓库中（或者还有别的发布方式）</li>
+</ol>
+<p><strong>注意：<code>hexo clean</code>不能缩写为<code>hexo c</code>，因为存在命令<code>hexo config</code></strong></p>
+<h1 id="书写并发布博客"><a href="#书写并发布博客" class="headerlink" title="书写并发布博客"></a>书写并发布博客</h1><p>前面已经讲了博客的配置/发布了，现在讲一下如何在Hexo里写一篇博客</p>
+<p>在<strong><em>站点目录</em></strong>中右键，选择<code>Git Bash Here</code>，输入命令<code>hexo new xxx</code>（请把<code>xxx</code>替换为您的文章URL，可以用中文，含有空格可能会出错）</p>
+<p>举个例子：<code>hexo new fuck</code>就是生成一篇URL为<code>fuck</code>的文章，编辑并发布后，您可以在<code>{你的网址}/fuck</code>访问到这篇文章。文章标题可以稍后修改</p>
+<p>也可以<code>hexo new 你好！</code>，稍后可以在<code>{你的网址}/你好！</code>访问。但是，不能用<code>hexo new hello world</code>，必须<code>hexo new hello-world</code>或者<code>hexo new helloworld</code>都可以</p>
+<p>好的，假设我们刚刚执行的是<code>hexo new test</code>，待命令执行成功后，你应该可以在你的<strong><em>站点目录</em></strong>里找到一个名叫<code>source</code>的文件夹，打开它，你应该可以看到一个名叫<code>_posts</code>的文件夹，打开它，可以看到<code>test.md</code>（<code>test</code>就是前面所说的URL，也是你之前填的那个<code>xxx</code>）</p>
+<p>这就是这篇博文的Markdown源代码了，你可以随意地修改它，基本上所有常用的Markdown语法都能解析，但是Latex暂时不能，这一步等会再配置</p>
+<p>如果您平常经常写代码，您肯定会喜欢使用VS Code作为您的Markdown编辑器，VS Code支持几乎所有语言代码的高亮；如果您很少写代码，只是平常写一些文章，您或许会更加喜欢Typora</p>
+<p>Typora是什么呢？</p>
+<p>一个轻便但高级的Markdown编辑器</p>
+<p>尽管体积很小，但是支持图片/标题/表格/清单/代码块/图标/表情/高亮…，让你可以专注于你所写的内容。Typora还可以自动帮你实时生成文章的TOC，还可以实时字数统计，自动配对括号，甚至可以方便地导出为PDF/HTML/DOC等，也可以从这些类型地文档导入。</p>
+<p>官网地址：<a href="https://www.typora.io/" rel="external nofollow noopener noreferrer" target="_blank">https://www.typora.io/</a></p>
+<p>好的，打了这么久广告，让我们回归正题。</p>
+<p>按理说，你打开你新建完的markdown文件，会看到下面的一个模板：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">xxxx-xx-xx</span> <span class="string">xx:xx:xx</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>好的，<code>title:</code>后面就是这篇文章的标题了，注意冒号是英文的，和文章名之间必须有一个空格，否则后面生成的时候会报错</p>
+<p><code>date:</code>后面是文章创作的时间，这个时间会由系统自动设置为你在Git Bash里创建这篇文章的时间，一般来说不用修改，<del>我曾经舍不得删一篇没用的测试文章，就把它的日期改成了0100-01-01 00:00:00，然后我发现年份必须在0100之后，否则好像会出一些Bug</del></p>
+<p><code>tags:</code>后面是这篇文章的标签，请按照以下格式书写：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">tags:</span> <span class="comment"># 注意，冒号后面最好加一个空格</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">标签1</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">标签2</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">标签3</span></span><br></pre></td></tr></table></figure>
+
+<p>当然了，如果你这篇文章只有一个标签，也可以用<code>tags: [标签1]</code>进行书写</p>
+<p>很明显，这些设置是不够的，我们可以加上<code>categories</code>的设置，也就是分类：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">xxxx-xx-xx</span> <span class="string">xx:xx:xx</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">标签1</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">标签2</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">标签3</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">[分类]</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注：Hexo不支持多个并列分类，只支持父子分类，但有些主题（比如我的主题Materialized）可以支持。在大多数主题（比如NexT）中，一篇文章使用多个category会导致后面的分类成为后面的分类成为前面分类的子分类，比如：</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">categories:</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">分类1</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">分类2</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>会导致分类2成为分类1的子分类，而不是并列分类。</strong></p>
+<p>但是，在像Materialized的少数主题中，会把上面的语法当成并列分类显示。Theme-Materialized: <a href="https://github.com/theme-materialized/hexo-theme-materialized" target="_blank" rel="noopener">https://github.com/theme-materialized/hexo-theme-materialized</a></p>
+<p>好的。你已经完成了基本的文章设置操作，可以开始尽情地使用Markdown写文章啦~</p>
+<p>写完了以后，保存，回到Git Bash，输入<code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code>并静待完成即可。然后，你就可以在你的网站上愉快地查看你的博客了！</p>
+<p>备注（如果你是一步步跟着来的，不用看了，“尝试发布博客”那章有了）：</p>
+<ol>
+<li><code>hexo s</code>是<code>hexo server</code>的缩写，在本地预览站点</li>
+<li><code>hexo cl</code>是<code>hexo clean</code>的缩写，删除上次生成的站点HTML文件</li>
+<li><code>hexo g</code>是<code>hexo generate</code>的缩写，生成站点HTML文件</li>
+<li><code>hexo d</code>是<code>hexo deploy</code>的缩写，把生成的站点HTML文件发布到git仓库中（或者还有别的发布方式）</li>
+</ol>
+<p><strong>注意：<code>hexo clean</code>不能缩写为<code>hexo c</code>，因为存在命令<code>hexo config</code></strong></p>
+<h1 id="NexT主题高级美化"><a href="#NexT主题高级美化" class="headerlink" title="NexT主题高级美化"></a>NexT主题高级美化</h1><p>暂时咕咕qwq</p>
+<hr>
+<p>注：由于博主较为忙碌，本文更新极为缓慢，更多请访问ouuan的博客相关文章 <a href="https://ouuan.github.io/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97" rel="external nofollow noopener noreferrer" target="_blank">https://ouuan.github.io/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97</a></p>
+
+    </div>
+</div>
+
+<div class="cube-article-nav">
+    <ul>
+        
+        
+        <li class="next">
+            <a href="/posts/how-to-crack-wjx/">
+                如何在问卷星考试中作弊
+                <i class="cube-icon cube-next" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+<!-- TODO 根据theme.comment的内容进行入口选择 -->
+  <div class="comments">
+    <center>
+    <br><br><br>
+    本站采用<a href="https://utteranc.es" rel="external nofollow noopener noreferrer" target="_blank">Utterances</a>作为评论系统，加载可能需要15秒，请耐心等待<br>
+    This site chooses <em><a href="https://utteranc.es" rel="external nofollow noopener noreferrer" target="_blank">Utterances</a></em> as the comment system, Please allow up to 15 seconds for loading</center>
+    <script src="https://utteranc.es/client.js" repo="code004Accepted/blog-comment" issue-term="title" label="Utterances" theme="github-dark-orange" crossorigin="anonymous" async>
+    </script>
+  </div>
+
+
+
+
+
+        </div>
+        <div class="cube-right">
+            
+
+<div class="cube-search cube-sidebar" id="cube-search">
+    <div class="search-container">
+        <input type="text" placeholder="搜索" class="cube-search-input" id="cube-search-input">
+        <i class="cube-icon cube-icon-search cube-search-submit" aria-hidden="true"></i>
+    </div>
+    <!-- TODO 通过给window赋一个全局变量，通过脚本赋值 -->
+</div>
+<script>
+    (function (window) {
+        'use strict';
+        window.searchModule = {}
+        window.searchModule.JSONUrl = '/content.json'
+        window.searchModule.rootUrl = '/'
+    })(window)
+</script>
+<div class="cube-search-form">
+    <div class="cube-search-control">
+        <input type="text" placeholder="搜索" class="search-input">
+        <a class="close-button">
+            <i class="cube-icon cube-close" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="cube-search-result"></div>
+</div>
+
+
+<div class="cube-author cube-sidebar" id="cube-author">
+    
+    
+    <style>
+        @media(min-width: 768px) {
+            .cube-author img {
+                margin-top: 40px;
+                margin-bottom: 10px;
+            }
+        }
+        @media(max-width: 1120px) and (min-width: 768px) {
+            .cube-author img {
+                width: 128px;
+                height: 128px;
+            }
+        }
+        @media(min-width: 1120px) {
+            .cube-author img {
+                width: 160px;
+                height: 160px;
+            }
+        }
+    </style>
+    
+    <img src="/images/avatar.jpg" alt="avatar" class="cube-avatar">
+    
+    
+    <span>code004</span>
+    
+    
+    <a title="一个OIer的学校生活与OI竞赛记录">一个OIer的学校生活与OI竞赛记录</a>
+    
+    <div class="count">
+        <a class="count articles"><span>48</span>文章</a>
+        <a class="count tags"><span>18</span>标签</a>
+        <a class="count categories"><span>8</span>分类</a>
+    </div>
+</div>
+
+
+
+<div class="cube-recent-posts cube-sidebar" id="cube-recent-posts">
+    <div class="title">
+        <a>近期文章</a>
+    </div>
+    <ul class="list">
+        
+        
+        <li>
+            <!-- TODO 如果文章要显示图片，那么在front-matter上添加preview属性(url or path) -->
+            
+            <div class="normal">
+                <p class="index first">
+                    <span>1</span>
+                </p>
+                <p class="title">
+                    <a href="/posts/how-to-build-a-hexo-blog - Copy/" title="Hexo博客搭建—从入门到精通">Hexo博客搭建—从入门到精通</a>
+                </p>
+            </div>
+            
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>2</span>
+                </p>
+                <p class="title">
+                    <a href="/posts/how-to-crack-wjx/" title="如何在问卷星考试中作弊">如何在问卷星考试中作弊</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>3</span>
+                </p>
+                <p class="title">
+                    <a href="/posts/reply-to-a-pr/" title="对一个Pull Request的回复">对一个Pull Request的回复</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>4</span>
+                </p>
+                <p class="title">
+                    <a href="/posts/about-the-10-points/" title="about-the-10-points">about-the-10-points</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>5</span>
+                </p>
+                <p class="title">
+                    <a href="/posts/how-to-reinstall-windows-10/" title="Windows 10 快速安装指南">Windows 10 快速安装指南</a>
+                </p>
+            </div>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+
+<div class="cube-categories cube-sidebar" id="cube-categories">
+    <div class="title">
+        <a href="/categories">分类</a>
+    </div>
+    <div class="cube-boxs">
+        
+        
+        <div class="cube-box-bg ">
+            <a href="/categories/随记/">#随记</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/categories/项目/">#项目</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/categories/教程/">#教程</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/categories/项目/GC-Server/">#GC Server</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/categories/收藏/">#收藏</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/categories/游戏/">#游戏</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/categories/游戏/Minecraft/">#Minecraft</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/categories/公告/">#公告</a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="cube-tagcloud cube-sidebar" id="cube-tagcloud">
+    <div class="title">
+        <a href="/tags">标签云</a>
+    </div>
+    <div class="cube-boxs">
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/娱乐/">#娱乐</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/纪念/">#纪念</a>
+        </div>
+        
+        
+        <div class="cube-box-bg ">
+            <a href="/tags/学校/">#学校</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/音乐/">#音乐</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/GC-Server/">#GC Server</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/数学/">#数学</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/英语/">#英语</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/基础知识/">#基础知识</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/开发工作/">#开发工作</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/项目发布/">#项目发布</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/项目文档/">#项目文档</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/图论/">#图论</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/算法/">#算法</a>
+        </div>
+        
+        
+        <div class="cube-box-bg ">
+            <a href="/tags/搭建/">#搭建</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/博客/">#博客</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/非请勿入/">#非请勿入</a>
+        </div>
+        
+        
+        <div class="cube-box ">
+            <a href="/tags/系统/">#系统</a>
+        </div>
+        
+        
+        <div class="cube-box-bg ">
+            <a href="/tags/软件/">#软件</a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="cube-links cube-sidebar" id="cube-links">
+    <div class="title">
+        <a>个人链接</a>
+    </div>
+    <ul class="list">
+        
+        <li>
+            
+            
+            <img src="/images/GitHub.png">
+            
+            <a href="https://github.com/code004Accepted" target="_blank">GitHub</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="/images/Coding.png">
+            
+            <a href="https://coding.net/u/code004" target="_blank" rel="external nofollow noopener noreferrer">Coding</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="/images/twitter.png">
+            
+            <a href="https://twitter.com/brianchen2006" target="_blank" rel="external nofollow noopener noreferrer">Twitter</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="/images/instagram.png">
+            
+            <a href="https://instagram.com/brianchen2019" target="_blank" rel="external nofollow noopener noreferrer">Instagram</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="/images/askfm.png">
+            
+            <a href="https://ask.fm/code004" target="_blank" rel="external nofollow noopener noreferrer">Ask.fm</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+    </div>
+</div>
+<footer class="cube-footer">
+    
+© 2020 code004
+
+<br>
+Powered by <a href="https://github.com/code004Accepted" target="_blank">code004Accepted</a>.&nbsp;Thanks to <a href="https://hexo.io" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>
+</footer>
+<!-- inject:script -->
+<script src="/js/script.js"></script>
+<!-- endinject -->
+<div class="cube-loading out"></div>
+</body>
