@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://code004.ml/posts/about-virtual-private-network-and-the-onion-router/</loc>
+    
+    <lastmod>2020-04-05T13:26:38.575Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://code004.ml/posts/temporary-farewell-for-a-better-start/</loc>
     
     <lastmod>2020-04-03T10:55:30.905Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://code004.ml/posts/reply-to-a-pr/</loc>
     
     <lastmod>2020-03-30T10:28:40.917Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://code004.ml/posts/about-virtual-private-network-and-the-onion-router/</loc>
-    
-    <lastmod>2020-03-30T10:24:20.882Z</lastmod>
     
   </url>
   
