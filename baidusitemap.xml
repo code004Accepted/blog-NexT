@@ -2,7 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://code004.ml/posts/about-virtual-private-network-and-the-onion-router/</loc>
-    <lastmod>2020-04-05</lastmod>
+    <lastmod>2020-04-06</lastmod>
+  </url>  <url>
+    <loc>https://code004.ml/posts/how-to-crack-wjx/</loc>
+    <lastmod>2020-04-06</lastmod>
   </url>  <url>
     <loc>https://code004.ml/posts/temporary-farewell-for-a-better-start/</loc>
     <lastmod>2020-04-03</lastmod>
@@ -12,9 +15,6 @@
   </url>  <url>
     <loc>https://code004.ml/posts/reply-to-a-pr/</loc>
     <lastmod>2020-03-30</lastmod>
-  </url>  <url>
-    <loc>https://code004.ml/posts/how-to-crack-wjx/</loc>
-    <lastmod>2020-02-22</lastmod>
   </url>  <url>
     <loc>https://code004.ml/posts/how-to-build-a-hexo-blog/</loc>
     <lastmod>2020-02-22</lastmod>

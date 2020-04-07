@@ -2,9 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://code004.ml/lts/index.html</loc>
+    
+    <lastmod>2020-04-07T02:42:18.898Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://code004.ml/countdown/index.html</loc>
+    
+    <lastmod>2020-04-06T15:50:14.502Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://code004.ml/virtual_reality/index.html</loc>
+    
+    <lastmod>2020-04-06T15:45:28.144Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://code004.ml/notebook/index.html</loc>
+    
+    <lastmod>2020-04-06T15:42:17.206Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://code004.ml/posts/about-virtual-private-network-and-the-onion-router/</loc>
     
-    <lastmod>2020-04-05T13:26:38.575Z</lastmod>
+    <lastmod>2020-04-06T15:22:43.902Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://code004.ml/posts/how-to-crack-wjx/</loc>
+    
+    <lastmod>2020-04-06T15:21:29.606Z</lastmod>
     
   </url>
   
@@ -44,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://code004.ml/posts/how-to-crack-wjx/</loc>
-    
-    <lastmod>2020-02-22T23:37:04.238Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://code004.ml/posts/how-to-build-a-hexo-blog/</loc>
     
     <lastmod>2020-02-22T04:53:37.290Z</lastmod>
@@ -68,13 +96,6 @@
     <loc>https://code004.ml/posts/notice-about-2019-ncov/</loc>
     
     <lastmod>2020-02-01T07:40:29.489Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://code004.ml/notebook/index.html</loc>
-    
-    <lastmod>2020-02-01T07:18:24.259Z</lastmod>
     
   </url>
   
