@@ -204,9 +204,28 @@
   </style>
 </noscript>
 
+<script src="/js/POP_UP_WINDOW.js"></script>
+<link rel="stylesheet" href="/css/POP_UP_WINDOW.css">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<script type="text/javascript">
+function welcome(){
+  console.log(window.location.pathname);
+  if(window.location.pathname=='/' || window.location.pathname=='/index.html'){//只在主页弹出
+    var welcome_text="欢迎您来到code004's Blog!";
+    }
+    swal({
+    title: "Welcome",
+    text: welcome_text,
+    imageUrl: "images/avatar.jpg",
+    timer: 3000,
+    showConfirmButton: false
+  });//弹出弹窗，imageUrl可根据自己需求设置，我这里使用了自己的头像。
+  }
+}
+</script>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN" onload="welcome()">
 
   
   
@@ -351,23 +370,6 @@
     
 
     <a href="/message/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br>留言</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-lts">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/lts/" rel="section"><i class="menu-item-icon fa fa-fw fa-hourglass-half"></i> <br>LTS</a>
 
   </li>
         
