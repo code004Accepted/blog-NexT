@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://code004.ml/about/index.html</loc>
+    
+    <lastmod>2020-04-18T16:29:32.178Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://code004.ml/links/index.html</loc>
     
     <lastmod>2020-04-07T10:29:47.110Z</lastmod>
@@ -65,13 +72,6 @@
   </url>
   
   <url>
-    <loc>https://code004.ml/countdown/index.html</loc>
-    
-    <lastmod>2020-04-06T15:50:14.502Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://code004.ml/posts/about-virtual-private-network-and-the-onion-router/</loc>
     
     <lastmod>2020-04-06T15:22:43.902Z</lastmod>
@@ -103,13 +103,6 @@
     <loc>https://code004.ml/posts/reply-to-a-pr/</loc>
     
     <lastmod>2020-03-30T10:28:40.917Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://code004.ml/about/index.html</loc>
-    
-    <lastmod>2020-03-30T09:33:22.372Z</lastmod>
     
   </url>
   
