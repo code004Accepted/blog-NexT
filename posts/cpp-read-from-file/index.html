@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -124,26 +124,19 @@
 })();
 </script>
 
-  <meta name="description" content="既然是“简洁教程”，当然就只讲用法不讲原理啦233 C++从文件中读入一般有两个函数：freopen和fopen，这两个函数都在stdio.h（也就是include中所写的cstdio）里面，使用也都很方便，下面我就分别讲一下 （还有fstream相关的说明，但是因为我太菜了，所以说明极度简略） （大概2&#x2F;3处还有一个丧心病狂的演示实验qwq）">
+  <meta name="description" content="既然是“简洁教程”，当然就只讲用法不讲原理啦233 C++从文件中读入一般有两个函数：freopen和fopen，这两个函数都在stdio.h（也就是include中所写的cstdio）里面，使用也都很方便，下面我就分别讲一下 （还有fstream相关的说明，但是因为我太菜了，所以说明极度简略） （大概2/3处还有一个丧心病狂的演示实验qwq）">
+<meta name="keywords" content="文件读入,freopen,fopen,fprintf,fscanf,C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++文件读入与输出简洁教程">
 <meta property="og:url" content="https://code004.ml/posts/cpp-read-from-file/index.html">
 <meta property="og:site_name" content="code004&#39;s Blog">
-<meta property="og:description" content="既然是“简洁教程”，当然就只讲用法不讲原理啦233 C++从文件中读入一般有两个函数：freopen和fopen，这两个函数都在stdio.h（也就是include中所写的cstdio）里面，使用也都很方便，下面我就分别讲一下 （还有fstream相关的说明，但是因为我太菜了，所以说明极度简略） （大概2&#x2F;3处还有一个丧心病狂的演示实验qwq）">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-09-08T07:23:09.000Z">
-<meta property="article:modified_time" content="2019-09-09T15:51:18.872Z">
-<meta property="article:author" content="code004">
-<meta property="article:tag" content="文件读入">
-<meta property="article:tag" content="freopen">
-<meta property="article:tag" content="fopen">
-<meta property="article:tag" content="fprintf">
-<meta property="article:tag" content="fscanf">
-<meta property="article:tag" content="C++">
+<meta property="og:description" content="既然是“简洁教程”，当然就只讲用法不讲原理啦233 C++从文件中读入一般有两个函数：freopen和fopen，这两个函数都在stdio.h（也就是include中所写的cstdio）里面，使用也都很方便，下面我就分别讲一下 （还有fstream相关的说明，但是因为我太菜了，所以说明极度简略） （大概2/3处还有一个丧心病狂的演示实验qwq）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-09T15:51:18.872Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++文件读入与输出简洁教程">
+<meta name="twitter:description" content="既然是“简洁教程”，当然就只讲用法不讲原理啦233 C++从文件中读入一般有两个函数：freopen和fopen，这两个函数都在stdio.h（也就是include中所写的cstdio）里面，使用也都很方便，下面我就分别讲一下 （还有fstream相关的说明，但是因为我太菜了，所以说明极度简略） （大概2/3处还有一个丧心病狂的演示实验qwq）">
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="code004's Blog" type="application/atom+xml">
@@ -201,7 +194,7 @@
   </style>
 </noscript>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -382,23 +375,6 @@
     
 
     <a href="/links/" rel="section"><i class="menu-item-icon fa fa-fw fa-link"></i> <br>友链</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-notes">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/notebook/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>笔记</a>
 
   </li>
         
@@ -623,7 +599,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教程/" itemprop="url" rel="index"><span itemprop="name">教程</span></a></span>
 
                 
                 
@@ -763,7 +739,7 @@
 <td align="center">创建新文件</td>
 </tr>
 </tbody></table>
-<p>（上述表格和定义来自<a href="https://cppreference.com" target="_blank" rel="external nofollow noopener noreferrer">cppreference.com</a>，<a href="https://zh.cppreference.com/w/c/io/freopen" target="_blank" rel="external nofollow noopener noreferrer">原文地址</a>）</p>
+<p>（上述表格和定义来自<a href="https://cppreference.com" rel="external nofollow noopener noreferrer" target="_blank">cppreference.com</a>，<a href="https://zh.cppreference.com/w/c/io/freopen" rel="external nofollow noopener noreferrer" target="_blank">原文地址</a>）</p>
 <p><code>freopen</code>可以被理解为<strong>重定向输入输出流</strong>，换句话说，这个函数会帮你把输入流和输出流<strong>重新指向</strong>某些文件，以某种模式进行读入和输出</p>
 <p><strong>注意！在使用freopen的<code>&quot;r&quot;</code>或<code>&quot;r+&quot;</code>模式时，请确保相关文件存在，否则会造成读入空字符串或者一些其他玄学的东西</strong></p>
 <p><strong>注意！在使用freopen的<code>&quot;w&quot;</code>或<code>&quot;w+&quot;</code>模式时，如果文件已存在会销毁文件</strong></p>
@@ -777,7 +753,7 @@
 <p>看起来似乎很可行，不是吗？</p>
 <p>且慢，首先我们得搞清楚一个事情。前面提到过，<code>&quot;r&quot;</code>选项如果没有文件就会打开失败，甚至可能导致程序乱码/胡乱输入等，如果用户是第一次玩游戏，那岂不是就Bug了？</p>
 <p>好的，有人会说，那我就加个判断呗，弄个消息框，问用户是否需要读档</p>
-<p>（或者可以用<a href="https://blog.csdn.net/chinawangfei/article/details/42487839" target="_blank" rel="external nofollow noopener noreferrer">这篇文章</a>和<a href="https://blog.csdn.net/roger_77/article/details/1538447" target="_blank" rel="external nofollow noopener noreferrer">这篇文章</a>里的许许多多中方式检测文件是否存在）</p>
+<p>（或者可以用<a href="https://blog.csdn.net/chinawangfei/article/details/42487839" rel="external nofollow noopener noreferrer" target="_blank">这篇文章</a>和<a href="https://blog.csdn.net/roger_77/article/details/1538447" rel="external nofollow noopener noreferrer" target="_blank">这篇文章</a>里的许许多多中方式检测文件是否存在）</p>
 <p>（我记得也可以通过把<code>&quot;r&quot;</code>换成<code>&quot;a+&quot;</code>解决，因为上面的表说了，<code>&quot;a+&quot;</code>也是支持读写的）</p>
 <p>好的，这没问题</p>
 <p>但是，你忘了一个问题</p>
@@ -906,10 +882,10 @@
 
 <p>（51行）</p>
 <p>就可以很明显地看出区别了。还有，我们的<code>fopen</code>写法中可以把第7~17行缩略为一行写完，这样又剩10行（虽然肯定不会那么好看…）</p>
-<h1 id="fstream-相关"><a href="#fstream-相关" class="headerlink" title="fstream 相关"></a>fstream 相关</h1><p>好吧，其实这种方法我并不知道，写这篇博文的时候查资料才发现的，大概说一下吧。具体内容请看<a href="https://blog.csdn.net/u012005313/article/details/46483103" target="_blank" rel="external nofollow noopener noreferrer">这里</a>和<a href="https://blog.csdn.net/kingstar158/article/details/6859379" target="_blank" rel="external nofollow noopener noreferrer">这里</a>（前者只给出了示例，后者非常详细）</p>
+<h1 id="fstream-相关"><a href="#fstream-相关" class="headerlink" title="fstream 相关"></a>fstream 相关</h1><p>好吧，其实这种方法我并不知道，写这篇博文的时候查资料才发现的，大概说一下吧。具体内容请看<a href="https://blog.csdn.net/u012005313/article/details/46483103" rel="external nofollow noopener noreferrer" target="_blank">这里</a>和<a href="https://blog.csdn.net/kingstar158/article/details/6859379" rel="external nofollow noopener noreferrer" target="_blank">这里</a>（前者只给出了示例，后者非常详细）</p>
 <p>方法原理：</p>
 <ol>
-<li>创建一个ofstream对象来管理输出流；（如需管理输入流，请把<code>ofstream</code>改为<code>ifstream</code>，原理参见<a href="https://blog.csdn.net/kingstar158/article/details/6859379" target="_blank" rel="external nofollow noopener noreferrer">这里</a>）</li>
+<li>创建一个ofstream对象来管理输出流；（如需管理输入流，请把<code>ofstream</code>改为<code>ifstream</code>，原理参见<a href="https://blog.csdn.net/kingstar158/article/details/6859379" rel="external nofollow noopener noreferrer" target="_blank">这里</a>）</li>
 <li>将该对象与特定的文件关联起来；</li>
 <li>以使用cout的方式使用该对象，唯一的区别是输出将进入文件，而不是屏幕</li>
 </ol>
@@ -958,7 +934,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" <i class="fa fa-tag"> 基础知识</a>
+            <a href="/tags/基础知识/" <i class="fa fa-tag"> 基础知识</a>
           
         </div>
       
@@ -1019,8 +995,8 @@
 
   <div class="comments">
     <center>
-    本站采用<a href="https://utteranc.es" target="_blank" rel="external nofollow noopener noreferrer">Utterances</a>作为评论系统，加载可能需要15秒，请耐心等待<br>
-    This site chooses <em><a href="https://utteranc.es" target="_blank" rel="external nofollow noopener noreferrer">Utterances</a></em> as the comment system, Please allow up to 15 seconds for loading</center>
+    本站采用<a href="https://utteranc.es" rel="external nofollow noopener noreferrer" target="_blank">Utterances</a>作为评论系统，加载可能需要15秒，请耐心等待<br>
+    This site chooses <em><a href="https://utteranc.es" rel="external nofollow noopener noreferrer" target="_blank">Utterances</a></em> as the comment system, Please allow up to 15 seconds for loading</center>
     <script src="https://utteranc.es/client.js" repo="code004Accepted/blog-comment" issue-term="title" label="Utterances" theme="github-dark-orange" crossorigin="anonymous" async>
     </script>
   </div>
@@ -1074,7 +1050,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/%20%7C%7C%20archive">
+                  <a href="/archives/">
                 
                     <span class="site-state-item-count">49</span>
                     <span class="site-state-item-name">日志</span>
@@ -1088,7 +1064,7 @@
                 <div class="site-state-item site-state-categories">
                   
                     
-                      <a href="/categories/%20%7C%7C%20th">
+                      <a href="/categories/">
                     
                   
                     
@@ -1123,7 +1099,7 @@
                 <div class="site-state-item site-state-tags">
                   
                     
-                      <a href="/tags/%20%7C%7C%20tags">
+                      <a href="/tags/">
                     
                   
                     

@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -125,20 +125,18 @@
 </script>
 
   <meta name="description" content="简介最近很多人找我要GC Server的源代码。我跟他们讲环境要求的时候，很多人都不以为然，结果最后仅仅测试程序就报了几千个Error。所以，我决定今天讲一下如何搭建你自己的GC Server。（目前还没有一个人成功，请量力而行，如果成功了记得在评论区告诉我~）">
+<meta name="keywords" content="GC Server">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用C++制作GC Server">
 <meta property="og:url" content="https://code004.ml/posts/make-your-own-gc-server-with-cpp/index.html">
 <meta property="og:site_name" content="code004&#39;s Blog">
 <meta property="og:description" content="简介最近很多人找我要GC Server的源代码。我跟他们讲环境要求的时候，很多人都不以为然，结果最后仅仅测试程序就报了几千个Error。所以，我决定今天讲一下如何搭建你自己的GC Server。（目前还没有一个人成功，请量力而行，如果成功了记得在评论区告诉我~）">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-05-18T16:43:10.000Z">
-<meta property="article:modified_time" content="2019-05-18T16:43:10.000Z">
-<meta property="article:author" content="code004">
-<meta property="article:tag" content="GC Server">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-18T16:43:10.000Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用C++制作GC Server">
+<meta name="twitter:description" content="简介最近很多人找我要GC Server的源代码。我跟他们讲环境要求的时候，很多人都不以为然，结果最后仅仅测试程序就报了几千个Error。所以，我决定今天讲一下如何搭建你自己的GC Server。（目前还没有一个人成功，请量力而行，如果成功了记得在评论区告诉我~）">
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="code004's Blog" type="application/atom+xml">
@@ -196,7 +194,7 @@
   </style>
 </noscript>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -377,23 +375,6 @@
     
 
     <a href="/links/" rel="section"><i class="menu-item-icon fa fa-fw fa-link"></i> <br>友链</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-notes">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/notebook/" rel="section"><i class="menu-item-icon fa fa-fw fa-sticky-note"></i> <br>笔记</a>
 
   </li>
         
@@ -602,7 +583,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">项目</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目/" itemprop="url" rel="index"><span itemprop="name">项目</span></a></span>
 
                 
                 
@@ -698,7 +679,7 @@
 
 <p>上述代码就是要先双击鼠标中键的滚轮（向下按），然后再左键一次右键一次即可。</p>
 <h3 id="Step-4-添加游戏"><a href="#Step-4-添加游戏" class="headerlink" title="Step 4 - 添加游戏"></a>Step 4 - 添加游戏</h3><p>游戏可以直接在GC Coding发帖，我会回复的。目前来说，大部分在GC Server目前版本已经开放的游戏代码都可以直接找我要。</p>
-<p><a href="http://gcbbs.ga" target="_blank" rel="external nofollow noopener noreferrer"><em>Just @code004 on the GC Coding Forum</em></a></p>
+<p><a href="http://gcbbs.ga" rel="external nofollow noopener noreferrer" target="_blank"><em>Just @code004 on the GC Coding Forum</em></a></p>
 <h3 id="Step-5-设计插件更改模块"><a href="#Step-5-设计插件更改模块" class="headerlink" title="Step 5 - 设计插件更改模块"></a>Step 5 - 设计插件更改模块</h3><p>你需要在Github上开一个repo，然后把你想用的插件打包传上去，用户想下载的时候，只需要用system调用打开浏览器访问指定网址，然后提示用户将下载的包放到安装目录中，再点击某个神奇的按钮后程序就自动开始解析用户下载的包，然后把文件加到下载目录里去。程序再修改一个安装目录下的文件，比如把0改成1，然后开始加载这个插件。</p>
 <p>一般来说用户比较喜欢有卸载功能的插件，这个也很简单，只需要加上一个卸载按钮，一旦用户点击确定后就删除包，然后把上面说的文件再改回去即可。</p>
 <p>还可以再repo里加一个README，在程序里加一个说明，一点就打开README的网址，这也不难。</p>
@@ -804,8 +785,8 @@
 
   <div class="comments">
     <center>
-    本站采用<a href="https://utteranc.es" target="_blank" rel="external nofollow noopener noreferrer">Utterances</a>作为评论系统，加载可能需要15秒，请耐心等待<br>
-    This site chooses <em><a href="https://utteranc.es" target="_blank" rel="external nofollow noopener noreferrer">Utterances</a></em> as the comment system, Please allow up to 15 seconds for loading</center>
+    本站采用<a href="https://utteranc.es" rel="external nofollow noopener noreferrer" target="_blank">Utterances</a>作为评论系统，加载可能需要15秒，请耐心等待<br>
+    This site chooses <em><a href="https://utteranc.es" rel="external nofollow noopener noreferrer" target="_blank">Utterances</a></em> as the comment system, Please allow up to 15 seconds for loading</center>
     <script src="https://utteranc.es/client.js" repo="code004Accepted/blog-comment" issue-term="title" label="Utterances" theme="github-dark-orange" crossorigin="anonymous" async>
     </script>
   </div>
@@ -859,7 +840,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/%20%7C%7C%20archive">
+                  <a href="/archives/">
                 
                     <span class="site-state-item-count">49</span>
                     <span class="site-state-item-name">日志</span>
@@ -873,7 +854,7 @@
                 <div class="site-state-item site-state-categories">
                   
                     
-                      <a href="/categories/%20%7C%7C%20th">
+                      <a href="/categories/">
                     
                   
                     
@@ -908,7 +889,7 @@
                 <div class="site-state-item site-state-tags">
                   
                     
-                      <a href="/tags/%20%7C%7C%20tags">
+                      <a href="/tags/">
                     
                   
                     
