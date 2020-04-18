@@ -667,7 +667,7 @@ function welcome(){
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-U2FsdGVkX19kN+8zvln3IhzBm0WQzFLyWOrVJCe5xlEWx/2VRC28Upn+N9EuVD0zu0DhqgOAE1TxryUITvB7IQ==
+U2FsdGVkX18sRqmTL/iwEUNsw5DcK3WQFpDr+SyXRtmaoYg2MNTRAXyyov1x1qjQTFokPfBmNYqKrMiqTDucqw==
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
@@ -1224,11 +1224,16 @@ U2FsdGVkX19kN+8zvln3IhzBm0WQzFLyWOrVJCe5xlEWx/2VRC28Upn+N9EuVD0zu0DhqgOAE1TxryUI
   <script src="/js/motion.js?v=7.1.2"></script>
 
 
+<script src="/js/POP_UP_WINDOW.js"></script>
+<link rel="stylesheet" href="/css/POP_UP_WINDOW.css">
+
 <script type="text/javascript">
 	$('.post-body').bind('copy', function() {
-		alert('欢迎将本博客原文地址分享到其它网站。允许不超过文章30%字数的摘录，但请在醒目位置附上原文链接及作者。未经许可禁止任何形式的全文转载。禁止发布任何基于本文的再创作。');
-	});
+		//alert('欢迎将本博客原文地址分享到其它网站。允许不超过文章30%字数的摘录，但请在醒目位置附上原文链接及作者。未经许可禁止任何形式的全文转载。禁止发布任何基于本文的再创作。');
+		sweetAlert("复制成功", "欢迎将本博客原文地址分享到其它网站。允许不超过文章30%字数的摘录，但请在醒目位置附上原文链接及作者。未经许可禁止任何形式的全文转载。禁止发布任何基于本文的再创作。复制本站任何内容即代表您已阅读、同意并保证遵守以上规则。", "success");
+                });
 </script>
+
 
   
   
