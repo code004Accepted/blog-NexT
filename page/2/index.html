@@ -199,14 +199,25 @@
 
 <script type="text/javascript">
 function welcome(){
-  console.log(window.location.pathname);
   if(window.location.pathname=='/' || window.location.pathname=='/index.html'){//只在主页弹出
-    var welcome_text="欢迎您来到code004's Blog!";
+    var welcome_text="";
+    if(document.referrer==''){//没有来源（例如直接输入域名访问）
+      welcome_text="欢迎来到code004's Blog";
+    }
+    else{
+      var GETMAIN=document.referrer;//获得用户来源
+      var referrer_domain=GETMAIN.split("/");//分割出主域名
+      referrer_domain=referrer_domain[2];//主域名存放的位置
+      welcome_text="欢迎你，来自"+referrer_domain.toUpperCase()+"的用户！";//生成欢迎文字
+      if(referrer_domain=="www.code004.ml" || referrer_domain=="code004.ml" || referrer_domain=="blog.code004.ml" || referrer_domain=="oier.ml" || referrer_domain=="www.oier.ml" || referrer_domain=="kkksc03.ml" || referrer_domain=="www.kkksc03.ml" || referrer_domain=="lintoto.ml" || referrer_domain=="www.lintoto.ml" || referrer_domain=="WWW.CODE004.ML" || referrer_domain=="CODE004.ML" || referrer_domain=="BLOG.CODE004.ML" || referrer_domain=="OIER.ML" || referrer_domain=="WWW.OIER.ML" || referrer_domain=="KKKSC03.ML" || referrer_domain=="WWW.KKKSC03.ML" || referrer_domain=="LINTOTO.ML" || referrer_domain=="WWW.LINTOTO.ML"){//如果来源是自己的域名，例如从一篇文章回到首页，就不会弹出，直接return，复制使用时需要修改主域名。
+        return;
+      }
+    }
     swal({
-    title: "Welcome",
+    title: " 欢迎！",
     text: welcome_text,
     imageUrl: "images/avatar.jpg",
-    timer: 3000,
+    timer: 2000,
     showConfirmButton: false
   });//弹出弹窗，imageUrl可根据自己需求设置，我这里使用了自己的头像。
   }
@@ -497,6 +508,341 @@ function welcome(){
           
           <div id="content" class="content">
             
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+
+.glyphicon-chevron-left{
+    position: absolute;
+    width: 25px;
+    height: 35px;
+    line-height: 36px;
+    text-align: center;
+    opacity: .5;
+    vertical-align: middle;
+    background: rgba(0,0,0);
+    left: 5px;
+    top: 45%;
+    color: #fff;
+    font-family: "宋体";
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+}
+
+.glyphicon-chevron-left:before{
+  content: "<";
+}
+.glyphicon-chevron-right{
+    position: absolute;
+    width: 25px;
+    height: 35px;
+    line-height: 36px;
+    text-align: center;
+    opacity: .5;
+    vertical-align: middle;
+    background: rgba(0,0,0);
+    top: 45%;
+    right: 5px;
+    color: #fff;
+    font-family: arial;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    font-family: "宋体";
+    display: none;
+}
+.glyphicon-chevron-right:before{
+  content: ">";
+}
+
+/*设置鼠标移入显示左右切换按钮*/
+#myCarousel:hover .glyphicon-chevron-left,
+#myCarousel:hover .glyphicon-chevron-right{
+  display: block;
+  text-align: middle;
+}
+
+/*设置手机端不展示轮播图*/
+@media (max-width: 767px){
+  .rights{
+    display: none;
+  }
+  .carousel{
+    display: none;
+  }
+  .slide{
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .tag-cloud{
+    display: none;
+  }
+}
+
+.carousel{
+  width: 65%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  line-height: 1;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-inner > .item {
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    -moz-transition: -moz-transform 0.6s ease-in-out;
+    -o-transition: -o-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+  }
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    left: 0;
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    left: 0;
+  }
+  .carousel-inner > .item.next.left,
+  .carousel-inner > .item.prev.right,
+  .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    left: 0;
+  }
+}
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .active {
+  left: 0;
+}
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.carousel-inner > .next {
+  left: 100%;
+}
+.carousel-inner > .prev {
+  left: -100%;
+}
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+.carousel-inner > .active.left {
+  left: -100%;
+}
+.carousel-inner > .active.right {
+  left: 100%;
+}
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+}
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+}
+.carousel-control.right {
+  left: auto;
+  right: 0px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+}
+.carousel-control:hover,
+.carousel-control:focus {
+  outline: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-left{
+  left: 9px;
+}
+
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right {
+  right: 0px;
+}
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  font-family: serif;
+}
+
+.carousel-indicators {
+  opacity: 0.4;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  text-indent: -999px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  background-color: rgba(0,0,0,.24);
+}
+.carousel-indicators .active {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+}
+.carousel-caption {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.carousel-caption .btn {
+  text-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .icon-prev {
+    margin-left: -10px;
+  }
+  .carousel-caption {
+    left: 20%;
+    right: 20%;
+    padding-bottom: 30px;
+  }
+  .carousel-indicators {
+    bottom: -14px;
+  }
+}
+
+.frontimgmiddle{
+    text-align: center;
+    border-color: white;
+}
+</style>
+<div width="100%" height="320px" style="border: 100px; overflow: hidden; border-radius: 10px; text-align: center; border-color: white;" scrolling="no" class="frontimgmiddle">		
+<article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <div class="post-block" style="opacity: 1; display: block;">
+	<center>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500">
+		<!-- 轮播（Carousel）指标 -->
+		<ol class="carousel-indicators">
+		
+		
+
+			<li data-target="#myCarousel" data-slide-to="0"></li>
+			
+
+		
+
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			
+
+		
+		</ol>
+		<!-- 轮播（Carousel）项目 -->
+		<div class="carousel-inner" style="height: 280px; border-radius: 10px; width: 100%;">
+
+		
+		 
+		
+	    	
+				<a class="item active" href="http://luosw.fun/caryon/" target="_blank" style="height: 100%;" rel="external nofollow noopener noreferrer">
+					<img src="https://s1.ax1x.com/2020/04/14/GzFUeJ.png" style="width: 100%; height: 100%">
+				</a>
+				
+				
+
+		
+		
+	    	
+					<a class="item" href="http://luosw.fun/caryon/" target="_blank" style="height: 100%;" rel="external nofollow noopener noreferrer">
+						<img src="https://s1.ax1x.com/2020/04/14/GzFUeJ.png" style="width: 100%; height: 100%;">
+					</a>
+			
+
+		
+
+	 
+		</div>
+		<!-- 轮播（Carousel）导航 -->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		   
+		</a>
+	</div>
+    </center>
+    </div>
+    </article>
+</div>
+<br>
+
   <section id="posts" class="posts-expand">
     
       

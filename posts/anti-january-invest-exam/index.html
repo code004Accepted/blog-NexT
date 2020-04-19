@@ -212,14 +212,25 @@
 
 <script type="text/javascript">
 function welcome(){
-  console.log(window.location.pathname);
   if(window.location.pathname=='/' || window.location.pathname=='/index.html'){//只在主页弹出
-    var welcome_text="欢迎您来到code004's Blog!";
+    var welcome_text="";
+    if(document.referrer==''){//没有来源（例如直接输入域名访问）
+      welcome_text="欢迎来到code004's Blog";
+    }
+    else{
+      var GETMAIN=document.referrer;//获得用户来源
+      var referrer_domain=GETMAIN.split("/");//分割出主域名
+      referrer_domain=referrer_domain[2];//主域名存放的位置
+      welcome_text="欢迎你，来自"+referrer_domain.toUpperCase()+"的用户！";//生成欢迎文字
+      if(referrer_domain=="www.code004.ml" || referrer_domain=="code004.ml" || referrer_domain=="blog.code004.ml" || referrer_domain=="oier.ml" || referrer_domain=="www.oier.ml" || referrer_domain=="kkksc03.ml" || referrer_domain=="www.kkksc03.ml" || referrer_domain=="lintoto.ml" || referrer_domain=="www.lintoto.ml" || referrer_domain=="WWW.CODE004.ML" || referrer_domain=="CODE004.ML" || referrer_domain=="BLOG.CODE004.ML" || referrer_domain=="OIER.ML" || referrer_domain=="WWW.OIER.ML" || referrer_domain=="KKKSC03.ML" || referrer_domain=="WWW.KKKSC03.ML" || referrer_domain=="LINTOTO.ML" || referrer_domain=="WWW.LINTOTO.ML"){//如果来源是自己的域名，例如从一篇文章回到首页，就不会弹出，直接return，复制使用时需要修改主域名。
+        return;
+      }
+    }
     swal({
-    title: "Welcome",
+    title: " 欢迎！",
     text: welcome_text,
     imageUrl: "images/avatar.jpg",
-    timer: 3000,
+    timer: 2000,
     showConfirmButton: false
   });//弹出弹窗，imageUrl可根据自己需求设置，我这里使用了自己的头像。
   }
