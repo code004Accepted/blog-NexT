@@ -1930,7 +1930,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff5987;
+  background: #ff49f5;
 }
 .feed-link,
 .chat {
@@ -3117,15 +3117,11 @@ ul.breadcrumb li+li:last-child {
   }
 }
 body {
-  background: url("https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture");
+  background: url("https://bing.ioliu.cn/v1/rand?w=1920&h=1080");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
-}
-.main-inner {
-  background: #fff;
-  opacity: 0.85;
 }
 .header-inner {
   opacity: 1;
