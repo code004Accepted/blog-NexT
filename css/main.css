@@ -1930,7 +1930,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff0159;
+  background: #04148e;
 }
 .feed-link,
 .chat {
@@ -3128,5 +3128,5 @@ body {
 }
 .main-inner {
   background: #fff;
-  opacity: 0.8;
+  opacity: 0.85;
 }
